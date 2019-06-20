@@ -19,7 +19,7 @@ namespace CustomerInquiry.DAL
         public System.DateTime TransactionDate { get; set; }
         public Nullable<decimal> Amount { get; set; }
         public string Currency { get; set; }
-        public bool Status { get; set; }
+        public string Status { get; set; }
     
         public virtual Customer Customer { get; set; }
     }

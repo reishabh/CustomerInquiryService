@@ -62,8 +62,7 @@ namespace CustomerInquiry.BAL.Service
                 cfg.CreateMap<Customer, CustomerDTO>();
                 cfg.CreateMap<Transaction, TransactionDTO>()
                 .ForMember(vm => vm.Id, m => m.MapFrom(u => u.TransactionId))
-                .ForMember(vm => vm.Date, m => m.MapFrom(u => u.TransactionDate.ToString("g", DateTimeFormatInfo.InvariantInfo)))
-                .ForMember(vm => vm.Status, m => m.MapFrom(u => u.Status ? "Success" : "Failed"));
+                .ForMember(vm => vm.Date, m => m.MapFrom(u => u.TransactionDate.ToString("g", DateTimeFormatInfo.InvariantInfo)));
             });
             IMapper mapper = config.CreateMapper();
             #endregion
